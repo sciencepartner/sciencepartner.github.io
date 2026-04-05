@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科学伙伴 - 理解科学，也理解科学如何改变世界</title>
+    <meta name="description" content="科学伙伴是一个面向未来的科学内容品牌，关注人工智能、医学、生命科学与科技社会议题的深度写作。">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="科学伙伴 - 理解科学，也理解科学如何改变世界">
+    <meta property="og:description" content="高端科学内容品牌，专注于深度科学写作与传播">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sciencepartner.com.cn">
+    
+    <!-- 字体预加载 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="alternate icon" href="assets/icons/favicon.ico">
+    
+    <!-- 主题颜色 -->
+    <meta name="theme-color" content="#F9F9F7">
+    
+    <!-- 脚本 -->
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" role="navigation" aria-label="主导航">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <span class="brand-name">科学伙伴</span>
+                <span class="brand-subtitle">SciencePartner</span>
+            </a>
+            
+            <button class="navbar-toggle" aria-label="切换菜单" aria-expanded="false">
+                <span class="toggle-icon"></span>
+            </button>
+            
+            <div class="navbar-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="/" class="nav-link active">首页</a></li>
+                    <li class="nav-item"><a href="essays.html" class="nav-link">文章</a></li>
+                    <li class="nav-item"><a href="columns/" class="nav-link">栏目</a></li>
+                    <li class="nav-item"><a href="features/" class="nav-link">专题</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">关于</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">联系</a></li>
+                </ul>
+                
+                <div class="navbar-actions">
+                    <a href="essays.html?filter=featured" class="btn btn-primary btn-sm">开始阅读</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 首屏 -->
+    <header class="hero" role="banner">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">理解科学，也理解科学如何改变世界</h1>
+                <p class="hero-subtitle">
+                    关注人工智能、医学、生命科学与科技社会议题的长期写作。<br>
+                    不是追逐热闹，而是认真解释那些真正重要的问题。
+                </p>
+                <div class="hero-actions">
+                    <a href="#featured-essays" class="btn btn-primary btn-lg">阅读代表文章</a>
+                    <a href="essays.html" class="btn btn-outline btn-lg">浏览全部稿件</a>
+                </div>
+            </div>
+            
+            <div class="hero-scroll">
+                <a href="#featured-essays" class="scroll-indicator" aria-label="向下滚动">
+                    <span class="scroll-arrow"></span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- 代表稿件 -->
+        <section id="featured-essays" class="section section-featured">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">代表稿件</h2>
+                    <p class="section-subtitle">编辑精选，体现我们的内容深度与视野</p>
+                </div>
+                
+                <div class="essays-grid" id="featured-essays-grid">
+                    <!-- 动态加载代表文章 -->
+                </div>
+                
+                <div class="section-footer">
+                    <a href="essays.html?filter=featured" class="btn btn-outline">查看更多代表文章</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 栏目入口 -->
+        <section class="section section-columns">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">主要栏目</h2>
+                    <p class="section-subtitle">长期关注的议题领域，系统性的内容组织</p>
+                </div>
+                
+                <div class="columns-grid" id="columns-grid">
+                    <!-- 动态加载栏目 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 品牌说明 -->
+        <section class="section section-brand">
+            <div class="container container-narrow">
+                <div class="brand-statement">
+                    <blockquote class="statement-quote">
+                        <p>科学伙伴是一个面向未来的科学内容品牌。</p>
+                        <p>我们关注的不只是"发生了什么"，更关注"为什么重要"，以及"科技如何改变人、社会、产业与世界"。</p>
+                        <p>在技术狂奔的时代，我们相信深度阅读仍有其必要性。把复杂世界讲清楚，也讲漂亮——这是我们的承诺，也是我们的实践。</p>
+                    </blockquote>
+                    <div class="statement-author">
+                        <span class="author-name">科学伙伴编辑部</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最新文章 -->
+        <section class="section section-latest">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">最新文章</h2>
+                    <p class="section-subtitle">最近更新的深度内容</p>
+                </div>
+                
+                <div class="essays-grid essays-grid-compact" id="latest-essays-grid">
+                    <!-- 动态加载最新文章 -->
+                </div>
+                
+                <div class="section-footer">
+                    <a href="essays.html" class="btn btn-outline">浏览全部文章</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 专题策划 -->
+        <section class="section section-features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">专题策划</h2>
+                    <p class="section-subtitle">深度系列，系统探讨重要议题</p>
+                </div>
+                
+                <div class="features-grid" id="features-grid">
+                    <!-- 动态加载专题 -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <span class="brand-name">科学伙伴</span>
+                        <span class="brand-subtitle">SciencePartner</span>
+                    </a>
+                    <p class="footer-tagline">把复杂世界讲清楚，也讲漂亮</p>
+                </div>
+                
+                <div class="footer-nav">
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">内容</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="essays.html">全部文章</a></li>
+                            <li><a href="columns/">所有栏目</a></li>
+                            <li><a href="features/">专题策划</a></li>
+                            <li><a href="essays.html?filter=featured">代表稿件</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">品牌</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="about.html">关于我们</a></li>
+                            <li><a href="about.html#mission">使命愿景</a></li>
+                            <li><a href="about.html#topics">关注议题</a></li>
+                            <li><a href="contact.html">联系我们</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">其他</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#" aria-label="微信公众号（建设中）">微信公众号</a></li>
+                            <li><a href="#" aria-label="RSS订阅（建设中）">RSS订阅</a></li>
+                            <li><a href="mailto:contact@sciencepartner.com.cn">投稿合作</a></li>
+                            <li><a href="#" aria-label="隐私政策（建设中）">隐私政策</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 科学伙伴. 保留所有权利.</p>
+                    <p class="footer-legal">复杂问题，值得被认真解释。</p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" aria-label="微信公众号" class="social-link">微信</a>
+                    <a href="#" aria-label="邮件订阅" class="social-link">邮件</a>
+                    <a href="#" aria-label="RSS订阅" class="social-link">RSS</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 加载指示器 -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- 数据脚本 -->
+    <script src="data/articles.js" defer></script>
+    <script src="data/columns.js" defer></script>
+    <script src="data/features.js" defer></script>
+</body>
+</html>
