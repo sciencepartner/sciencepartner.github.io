@@ -1,8 +1,8 @@
-/* 科学伙伴 - 主样式文件 */
-/* 设计系统：高级杂志感 + 现代知识品牌 */
+/* 科学伙伴 - 主样式文件（移动端优化集成版） */
+/* 设计系统：高级杂志感 + 现代知识品牌 + 移动端优先 */
 
 :root {
-    /* 配色系统 - 浅色高级杂志风 */
+    /* ===== 配色系统 - 浅色高级杂志风 ===== */
     --color-background: #F9F9F7;      /* 象牙白背景 */
     --color-surface: #FFFFFF;         /* 卡片表面 */
     --color-surface-alt: #F5F5F3;     /* 交替表面 */
@@ -30,7 +30,7 @@
     --color-dark-text: #E2E8F0;       /* 深色模式文字 */
     --color-dark-accent: #63B3ED;     /* 深色模式点缀 */
     
-    /* 字体系统 */
+    /* ===== 字体系统 ===== */
     --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --font-family-serif: Georgia, "Times New Roman", Times, serif;
     --font-family-mono: "SF Mono", Monaco, "Cascadia Mono", "Roboto Mono", monospace;
@@ -40,41 +40,55 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     
-    /* 字号系统 (基于1rem = 16px) */
+    /* ===== 响应式断点系统 ===== */
+    --breakpoint-xs: 375px;   /* 小屏手机 */
+    --breakpoint-sm: 480px;   /* 中屏手机 */
+    --breakpoint-md: 768px;   /* 平板/大手机 */
+    --breakpoint-lg: 1024px;  /* 小桌面 */
+    --breakpoint-xl: 1280px;  /* 桌面 */
+    --breakpoint-2xl: 1536px; /* 大桌面 */
+    
+    /* ===== 移动端优先的字号系统 ===== */
+    /* 基础字号（移动端） */
     --font-size-xs: 0.75rem;      /* 12px */
     --font-size-sm: 0.875rem;     /* 14px */
     --font-size-base: 1rem;       /* 16px */
     --font-size-lg: 1.125rem;     /* 18px */
     --font-size-xl: 1.25rem;      /* 20px */
     --font-size-2xl: 1.5rem;      /* 24px */
-    --font-size-3xl: 1.875rem;    /* 30px */
-    --font-size-4xl: 2.25rem;     /* 36px */
-    --font-size-5xl: 3rem;        /* 48px */
-    --font-size-6xl: 3.75rem;     /* 60px */
+    --font-size-3xl: 1.75rem;     /* 28px - 移动端大标题 */
+    --font-size-4xl: 2rem;        /* 32px - 移动端特大标题 */
+    --font-size-5xl: 2.5rem;      /* 40px - 桌面端大标题 */
+    --font-size-6xl: 3rem;        /* 48px - 桌面端特大标题 */
     
-    /* 行高系统 */
-    --line-height-tight: 1.25;
-    --line-height-normal: 1.5;
-    --line-height-relaxed: 1.75;
-    --line-height-loose: 2;
+    /* ===== 移动端优化的行高系统 ===== */
+    --line-height-tight: 1.3;     /* 标题 */
+    --line-height-normal: 1.5;    /* 正文 */
+    --line-height-relaxed: 1.7;   /* 移动端正文（更宽松） */
+    --line-height-loose: 1.9;     /* 引文、诗歌 */
     
-    /* 间距系统 (基于8px网格) */
+    /* ===== 移动端优化的间距系统 ===== */
+    /* 基于4px网格，适合触控 */
     --spacing-0: 0;
-    --spacing-1: 0.25rem;     /* 4px */
-    --spacing-2: 0.5rem;      /* 8px */
-    --spacing-3: 0.75rem;     /* 12px */
-    --spacing-4: 1rem;        /* 16px */
+    --spacing-1: 0.25rem;     /* 4px - 微间距 */
+    --spacing-2: 0.5rem;      /* 8px - 小间距 */
+    --spacing-3: 0.75rem;     /* 12px - 中间距 */
+    --spacing-4: 1rem;        /* 16px - 基础间距 */
     --spacing-5: 1.25rem;     /* 20px */
-    --spacing-6: 1.5rem;      /* 24px */
-    --spacing-8: 2rem;        /* 32px */
+    --spacing-6: 1.5rem;      /* 24px - 卡片内边距 */
+    --spacing-8: 2rem;        /* 32px - 模块间距 */
     --spacing-10: 2.5rem;     /* 40px */
     --spacing-12: 3rem;       /* 48px */
-    --spacing-16: 4rem;       /* 64px */
+    --spacing-16: 4rem;       /* 64px - 大模块间距 */
     --spacing-20: 5rem;       /* 80px */
     --spacing-24: 6rem;       /* 96px */
     --spacing-32: 8rem;       /* 128px */
     
-    /* 圆角系统 */
+    /* 触控友好尺寸 */
+    --touch-target: 2.75rem;  /* 44px - 最小触控区域 */
+    --touch-padding: 0.75rem; /* 12px - 触控元素内边距 */
+    
+    /* ===== 圆角系统 ===== */
     --radius-sm: 0.125rem;    /* 2px */
     --radius-md: 0.375rem;    /* 6px */
     --radius-lg: 0.5rem;      /* 8px */
@@ -82,29 +96,31 @@
     --radius-2xl: 1rem;       /* 16px */
     --radius-full: 9999px;
     
-    /* 阴影系统 */
+    /* ===== 阴影系统 ===== */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     
-    /* 过渡动画 */
+    /* ===== 过渡动画 ===== */
     --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
     
-    /* 容器宽度 */
-    --container-sm: 640px;
-    --container-md: 768px;
-    --container-lg: 1024px;
-    --container-xl: 1200px;
-    --container-2xl: 1400px;
+    /* ===== 容器宽度 ===== */
+    --container-sm: 100%;     /* 移动端全宽 */
+    --container-md: 100%;     /* 平板全宽 */
+    --container-lg: 1024px;   /* 小桌面 */
+    --container-xl: 1200px;   /* 桌面 */
+    --container-2xl: 1400px;  /* 大桌面 */
     
-    /* 文章阅读宽度 */
-    --article-width: 42rem;   /* 672px - 最佳阅读宽度 */
+    /* ===== 文章阅读宽度（移动端优化） ===== */
+    --article-width-mobile: calc(100vw - 2rem); /* 手机端：全宽减边距 */
+    --article-width-tablet: 42rem;             /* 平板：672px */
+    --article-width-desktop: 48rem;            /* 桌面：768px */
     
-    /* Z-index 层级 */
+    /* ===== Z-index 层级 ===== */
     --z-dropdown: 1000;
     --z-sticky: 1020;
     --z-fixed: 1030;
@@ -112,101 +128,157 @@
     --z-modal: 1050;
     --z-popover: 1060;
     --z-tooltip: 1070;
+    --z-mobile-menu: 1080;    /* 移动端菜单最高层 */
 }
 
-/* 基础重置 */
+/* ===== 基础重置（移动端优化） ===== */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent; /* 移除移动端点击高亮 */
 }
 
 html {
     font-size: 16px;
-    -webkit-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; /* 防止iOS字体缩放 */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
+    overflow-x: hidden; /* 防止横向滚动 */
 }
 
 body {
     font-family: var(--font-family-sans);
     font-size: var(--font-size-base);
-    line-height: var(--line-height-relaxed);
+    line-height: var(--line-height-relaxed); /* 移动端使用更宽松行高 */
     color: var(--color-text-primary);
     background-color: var(--color-background);
     overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* 排版基础 */
+/* ===== 移动端优化的排版系统 ===== */
 h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-semibold);
     line-height: var(--line-height-tight);
     margin-bottom: var(--spacing-4);
     color: var(--color-text-primary);
+    letter-spacing: -0.01em; /* 轻微字距调整，更适合移动端阅读 */
 }
 
+/* 移动端标题优化 */
 h1 {
-    font-size: var(--font-size-5xl);
+    font-size: var(--font-size-4xl); /* 移动端：32px */
     font-weight: var(--font-weight-bold);
     letter-spacing: -0.025em;
+    margin-bottom: var(--spacing-6);
 }
 
 h2 {
-    font-size: var(--font-size-4xl);
-    letter-spacing: -0.025em;
+    font-size: var(--font-size-3xl); /* 移动端：28px */
+    letter-spacing: -0.02em;
+    margin-bottom: var(--spacing-5);
 }
 
 h3 {
-    font-size: var(--font-size-3xl);
-}
-
-h4 {
-    font-size: var(--font-size-2xl);
-}
-
-h5 {
-    font-size: var(--font-size-xl);
-}
-
-h6 {
-    font-size: var(--font-size-lg);
-}
-
-p {
+    font-size: var(--font-size-2xl); /* 移动端：24px */
     margin-bottom: var(--spacing-4);
 }
 
+h4 {
+    font-size: var(--font-size-xl); /* 移动端：20px */
+    margin-bottom: var(--spacing-3);
+}
+
+h5 {
+    font-size: var(--font-size-lg); /* 移动端：18px */
+    margin-bottom: var(--spacing-3);
+}
+
+h6 {
+    font-size: var(--font-size-base); /* 移动端：16px */
+    margin-bottom: var(--spacing-2);
+}
+
+/* 移动端段落优化 */
+p {
+    margin-bottom: var(--spacing-6); /* 增加段落间距，提高可读性 */
+    line-height: var(--line-height-relaxed);
+    max-width: 65ch; /* 最佳阅读宽度：约65字符 */
+}
+
+/* 移动端链接优化 */
 a {
     color: var(--color-accent-light);
     text-decoration: none;
     transition: color var(--transition-fast);
+    padding: 0.125rem 0.25rem; /* 增加点击区域 */
+    margin: -0.125rem -0.25rem; /* 补偿padding */
+    border-radius: var(--radius-sm);
 }
 
 a:hover {
     color: var(--color-accent-lighter);
+    background-color: rgba(43, 108, 176, 0.05); /* 悬停背景 */
 }
 
-/* 容器系统 */
+/* 移动端按钮式链接 */
+a.btn-like {
+    display: inline-block;
+    min-height: var(--touch-target);
+    padding: var(--touch-padding) var(--spacing-4);
+    background-color: var(--color-accent);
+    color: white;
+    border-radius: var(--radius-md);
+    font-weight: var(--font-weight-medium);
+    text-align: center;
+}
+
+/* ===== 移动端优化的容器系统 ===== */
 .container {
     width: 100%;
     max-width: var(--container-xl);
     margin: 0 auto;
-    padding: 0 var(--spacing-6);
+    padding: 0 var(--spacing-4); /* 移动端：较小的边距 */
 }
 
 .container-narrow {
-    max-width: var(--article-width);
+    max-width: var(--article-width-tablet);
 }
 
-/* 工具类 - 将在 utilities.css 中扩展 */
+/* ===== 响应式断点系统 ===== */
 
-/* 响应式断点 */
-@media (max-width: 768px) {
+/* 超小屏幕手机 (< 375px) */
+@media (max-width: 374px) {
     :root {
-        --font-size-5xl: 2.5rem;      /* 40px */
-        --font-size-4xl: 2rem;        /* 32px */
-        --font-size-3xl: 1.5rem;      /* 24px */
+        --font-size-4xl: 1.75rem;  /* 28px */
+        --font-size-3xl: 1.5rem;   /* 24px */
+        --font-size-2xl: 1.25rem;  /* 20px */
+        --font-size-xl: 1.125rem;  /* 18px */
+        --font-size-lg: 1rem;      /* 16px */
+    }
+    
+    .container {
+        padding: 0 var(--spacing-3);
+    }
+    
+    h1 {
+        margin-bottom: var(--spacing-4);
+    }
+    
+    p {
+        margin-bottom: var(--spacing-5);
+    }
+}
+
+/* 小屏幕手机 (375px - 479px) */
+@media (min-width: 375px) and (max-width: 479px) {
+    :root {
+        --font-size-4xl: 2rem;     /* 32px */
+        --font-size-3xl: 1.75rem;  /* 28px */
+        --font-size-2xl: 1.5rem;   /* 24px */
     }
     
     .container {
@@ -214,49 +286,67 @@ a:hover {
     }
 }
 
-/* 深色模式支持 */
-@media (prefers-color-scheme: dark) {
+/* 中屏幕手机 (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
     :root {
-        --color-background: var(--color-dark-background);
-        --color-surface: var(--color-dark-surface);
-        --color-surface-alt: #2A4365;
-        
-        --color-text-primary: var(--color-dark-text);
-        --color-text-secondary: #CBD5E0;
-        --color-text-tertiary: #A0AEC0;
-        --color-text-muted: #718096;
-        
-        --color-accent: var(--color-dark-accent);
-        --color-accent-light: #90CDF4;
-        --color-accent-lighter: #63B3ED;
-        
-        --color-border: #4A5568;
-        --color-border-light: #2D3748;
-    }
-}
-
-/* 打印样式 */
-@media print {
-    body {
-        background: white;
-        color: black;
-        font-size: 12pt;
-    }
-    
-    .navbar,
-    .footer,
-    .hero-actions,
-    .section-footer {
-        display: none;
-    }
-    
-    a {
-        color: black;
-        text-decoration: underline;
+        --font-size-4xl: 2.25rem;  /* 36px */
+        --font-size-3xl: 2rem;     /* 32px */
+        --font-size-2xl: 1.75rem;  /* 28px */
     }
     
     .container {
-        max-width: 100%;
-        padding: 0;
+        padding: 0 var(--spacing-5);
     }
 }
+
+/* 平板和大手机 (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    :root {
+        --font-size-5xl: 2.75rem;  /* 44px */
+        --font-size-4xl: 2.5rem;   /* 40px */
+        --font-size-3xl: 2.25rem;  /* 36px */
+        --font-size-2xl: 2rem;     /* 32px */
+    }
+    
+    .container {
+        padding: 0 var(--spacing-6);
+    }
+    
+    h1 {
+        font-size: var(--font-size-5xl);
+    }
+}
+
+/* 小桌面 (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    :root {
+        --font-size-6xl: 3.5rem;   /* 56px */
+        --font-size-5xl: 3rem;     /* 48px */
+        --font-size-4xl: 2.75rem;  /* 44px */
+        --font-size-3xl: 2.5rem;   /* 40px */
+    }
+    
+    h1 {
+        font-size: var(--font-size-6xl);
+    }
+}
+
+/* 桌面 (1280px - 1535px) */
+@media (min-width: 1280px) and (max-width: 1535px) {
+    :root {
+        --font-size-6xl: 3.75rem;  /* 60px */
+        --font-size-5xl: 3.25rem;  /* 52px */
+        --font-size-4xl: 3rem;     /* 48px */
+        --font-size-3xl: 2.75rem;  /* 44px */
+    }
+}
+
+/* 大桌面 (1536px+) */
+@media (min-width: 1536px) {
+    :root {
+        --font-size-6xl: 4rem;     /* 64px */
+        --font-size-5xl: 3.5rem;   /* 56px */
+        --font-size-4xl: 3.25rem;  /* 52px */
+        --font-size-3xl: 3rem;     /* 48px */
+    }
+    

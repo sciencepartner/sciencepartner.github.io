@@ -1,0 +1,217 @@
+/* 科学伙伴 - 设备自适应样式（精简版） */
+
+/* ===== 设备检测类 ===== */
+
+/* 设备类型 */
+.device-mobile {
+    /* 移动设备优化 */
+    --touch-target: 2.75rem;
+}
+
+.device-tablet {
+    /* 平板设备优化 */
+    --touch-target: 2.5rem;
+}
+
+.device-desktop {
+    /* 桌面设备优化 */
+    --touch-target: 2rem;
+}
+
+/* 屏幕方向 */
+.orientation-portrait {
+    /* 竖屏优化 */
+}
+
+.orientation-landscape {
+    /* 横屏优化 */
+}
+
+/* ===== 布局优化 ===== */
+
+/* 移动端竖屏优化版 */
+.layout-mobile-portrait {
+    /* 最优移动竖屏体验 */
+    
+    /* 导航优化 */
+    .navbar-toggle {
+        display: flex !important;
+    }
+    
+    .navbar-menu {
+        position: fixed;
+        right: -100%;
+        width: 85%;
+        max-width: 20rem;
+    }
+    
+    /* Hero首屏优化 */
+    .hero-title {
+        font-size: var(--font-size-4xl) !important;
+        text-align: center;
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-lg) !important;
+        padding: 0 var(--spacing-4);
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        gap: var(--spacing-4);
+    }
+    
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
+        max-width: 20rem;
+    }
+    
+    /* 内容卡片优化 */
+    .card-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--spacing-6);
+    }
+    
+    .card {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    
+    /* 文章阅读优化 */
+    .article-content {
+        max-width: 100% !important;
+        padding: 0 var(--spacing-4);
+    }
+}
+
+/* 移动端横屏版 */
+.layout-mobile-landscape {
+    /* 手机横屏：简化桌面布局 */
+    
+    .navbar-menu {
+        display: flex !important;
+        position: static;
+        width: auto;
+    }
+    
+    .navbar-toggle {
+        display: none !important;
+    }
+    
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--spacing-4);
+    }
+}
+
+/* 平板竖屏版 */
+.layout-tablet-portrait {
+    /* 平板竖屏：增强移动布局 */
+    
+    .hero-title {
+        font-size: var(--font-size-5xl) !important;
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-xl) !important;
+    }
+    
+    .hero-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--spacing-6);
+    }
+}
+
+/* 平板横屏版 */
+.layout-tablet-landscape {
+    /* 平板横屏：简化桌面布局 */
+    
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: var(--spacing-6);
+    }
+}
+
+/* 桌面版 */
+.layout-desktop {
+    /* 完整桌面体验 */
+    
+    .navbar-toggle {
+        display: none !important;
+    }
+    
+    .navbar-menu {
+        display: flex !important;
+        position: static;
+        width: auto;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-6xl) !important;
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-2xl) !important;
+    }
+    
+    .hero-actions {
+        flex-direction: row;
+        gap: var(--spacing-8);
+    }
+    
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: var(--spacing-8);
+    }
+}
+
+/* ===== 触摸设备优化 ===== */
+
+.touch-enabled {
+    /* 触摸设备优化 */
+    
+    /* 增大点击区域 */
+    .btn,
+    .nav-link {
+        min-height: var(--touch-target);
+        padding: var(--touch-padding) var(--spacing-4);
+    }
+}
+
+/* ===== 安全区域支持（全面屏设备） ===== */
+
+@supports (padding: max(0px)) {
+    .device-mobile {
+        /* 顶部安全区域 */
+        .navbar {
+            padding-top: env(safe-area-inset-top);
+            height: calc(3.5rem + env(safe-area-inset-top));
+        }
+        
+        /* 侧边安全区域 */
+        .container {
+            padding-left: max(var(--spacing-4), env(safe-area-inset-left));
+            padding-right: max(var(--spacing-4), env(safe-area-inset-right));
+        }
+    }
+}
+
+/* ===== 性能优化 ===== */
+
+/* 低端设备优化 */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-arrow {
+        animation: none;
+    }
+    
+    .btn-primary:hover,
+    .btn-outline:hover {
+        transform: none;
+    }
+}
