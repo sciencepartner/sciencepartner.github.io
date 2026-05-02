@@ -313,8 +313,14 @@ body::before {
   font-size: clamp(2.2rem, 4vw, 4.5rem);
   line-height: .98;
   letter-spacing: -.055em;
+  color: #fffdf8;
 }
 .briefing-box p { color: rgba(255,253,248,.76); }
+.briefing-box .btn-primary {
+  color: #fffdf8;
+  background: rgba(8, 28, 55, .72);
+  border-color: rgba(255, 253, 248, .16);
+}
 .briefing-points { display: grid; gap: 16px; align-content: center; }
 .briefing-point {
   border-top: 1px solid rgba(255,253,248,.22);
