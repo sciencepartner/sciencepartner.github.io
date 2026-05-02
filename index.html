@@ -3,310 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>科学伙伴 - 理解科学，也理解科学如何改变世界</title>
-    <meta name="description" content="科学伙伴是一个面向未来的科学内容品牌，关注人工智能、医学、生命科学与科技社会议题的深度写作。">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="科学伙伴 - 理解科学，也理解科学如何改变世界">
-    <meta property="og:description" content="高端科学内容品牌，专注于深度科学写作与传播">
+    <title>科学伙伴 Science Partner｜科技、社会与商业的知识平台</title>
+    <meta name="description" content="科学伙伴是一个关注科技、社会与商业交汇处的高端知识平台，聚焦人工智能治理、生命科学、前沿产业与国际科技传播。">
+    <meta property="og:title" content="科学伙伴 Science Partner｜科技、社会与商业的知识平台">
+    <meta property="og:description" content="一个具有国际视野、专业判断与出版物气质的科技知识平台。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sciencepartner.com.cn">
-    
-    <!-- 字体预加载 -->
+    <meta property="og:url" content="https://sciencepartner.github.io">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/device-adaptive.css">
-    
-    <!-- Favicon -->
+    <link rel="stylesheet" href="css/magazine.css">
     <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
     <link rel="alternate icon" href="assets/icons/favicon.ico">
-    
-    <!-- 主题颜色 -->
-    <meta name="theme-color" content="#F9F9F7">
-    
-    <!-- 脚本 -->
+    <meta name="theme-color" content="#F4F1E9">
     <script src="js/main.js" defer></script>
     <script src="js/device-detection.js" defer></script>
     <script src="js/mobile-navigation.js" defer></script>
 </head>
 <body>
-    <!-- 导航栏（移动端优化） -->
     <nav class="navbar" role="navigation" aria-label="主导航">
         <div class="container">
             <a href="/" class="navbar-brand">
                 <span class="brand-name">科学伙伴</span>
-                <span class="brand-subtitle">SciencePartner</span>
+                <span class="brand-subtitle">Science Partner</span>
             </a>
-            
-            <!-- 汉堡菜单按钮（移动端显示） -->
             <button class="navbar-toggle" aria-label="切换菜单" aria-expanded="false" aria-controls="navbar-menu">
                 <span class="toggle-icon"></span>
             </button>
-            
-            <!-- 移动端菜单覆盖层 -->
             <div class="navbar-overlay" aria-hidden="true"></div>
-            
-            <!-- 导航菜单 -->
             <div class="navbar-menu" id="navbar-menu" aria-hidden="true">
-                <!-- 菜单关闭按钮（移动端） -->
                 <button class="menu-close" aria-label="关闭菜单">×</button>
-                
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="/" class="nav-link active">首页</a></li>
-                    <li class="nav-item"><a href="essays.html" class="nav-link">文章</a></li>
-                    <li class="nav-item"><a href="columns/" class="nav-link">栏目</a></li>
-                    <li class="nav-item"><a href="features/" class="nav-link">专题</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">关于</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">联系</a></li>
+                    <li class="nav-item"><a href="/" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="essays.html" class="nav-link">Essays</a></li>
+                    <li class="nav-item"><a href="columns/" class="nav-link">Topics</a></li>
+                    <li class="nav-item"><a href="features/" class="nav-link">Features</a></li>
+                    <li class="nav-item"><a href="#briefing" class="nav-link">Briefing</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                 </ul>
-                
-                <!-- 菜单底部区域（移动端） -->
                 <div class="menu-footer">
                     <div class="menu-actions">
-                        <a href="essays.html?filter=featured" class="btn btn-primary">开始阅读</a>
-                        <a href="about.html" class="btn btn-outline">了解我们</a>
+                        <a href="essays.html" class="btn btn-primary">开始阅读</a>
+                        <a href="contact.html" class="btn btn-outline">联系合作</a>
                     </div>
                 </div>
             </div>
-            
-            <!-- 桌面端操作按钮 -->
             <div class="navbar-actions">
-                <a href="essays.html?filter=featured" class="btn btn-primary btn-sm">开始阅读</a>
+                <a href="contact.html" class="btn btn-primary btn-sm">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero 首屏（移动端优化） -->
-    <header class="hero" role="banner">
+    <header class="editorial-hero" role="banner">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">理解科学，也理解科学如何改变世界</h1>
-                <p class="hero-subtitle">
-                    关注人工智能、医学、生命科学与科技社会议题的长期写作。<br>
-                    不是追逐热闹，而是认真解释那些真正重要的问题。
-                </p>
-                <div class="hero-actions">
-                    <a href="#featured-essays" class="btn btn-primary btn-lg">阅读代表文章</a>
-                    <a href="essays.html" class="btn btn-outline btn-lg">浏览全部稿件</a>
+            <div class="kicker">Science · Society · Business</div>
+            <div class="hero-magazine-grid">
+                <div>
+                    <h1 class="hero-main-title">
+                        <span class="line">理解科技，</span>
+                        <span class="line">也理解它</span>
+                        <span class="line">如何改变世界。</span>
+                    </h1>
+                    <p class="hero-deck">
+                        科学伙伴关注人工智能、生命科学、前沿产业与全球科技治理中的关键问题，连接技术事实、产业判断与公共价值。
+                    </p>
+                    <div class="hero-meta-row">
+                        <span>AI Governance</span>
+                        <span>Life Science</span>
+                        <span>Global Science Communication</span>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="hero-scroll">
-                <a href="#featured-essays" class="scroll-indicator" aria-label="向下滚动">
-                    <span class="scroll-arrow"></span>
-                    <span class="scroll-text">探索更多</span>
-                </a>
+                <aside class="issue-panel" aria-label="本期推荐">
+                    <div class="issue-label"><span>Featured Essay</span><span>2026</span></div>
+                    <h2>当AI成为基础设施，治理能力如何跟上？</h2>
+                    <p>
+                        人工智能正在从工具变成社会基础设施。真正的挑战不只是模型能力，而是制度、责任与信任的重建。
+                    </p>
+                    <div class="issue-topics">
+                        <div class="issue-topic"><strong>Perspective</strong>技术进步之后，谁来定义公共利益？</div>
+                        <div class="issue-topic"><strong>Industry</strong>中国创新药出海，进入价值重估时刻</div>
+                        <div class="issue-topic"><strong>Communication</strong>如何向世界讲清中国科技创新？</div>
+                    </div>
+                </aside>
             </div>
         </div>
     </header>
 
-    <!-- 主要内容区域 -->
     <main class="main-content">
-        <div class="container">
-            
-            <!-- 代表稿件 -->
-            <section id="featured-essays" class="section">
+        <section id="featured-essays" class="section">
+            <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">代表稿件</h2>
-                    <p class="section-subtitle">精选深度科学写作</p>
+                    <h2 class="section-title">Essays</h2>
+                    <p class="section-subtitle">不是追逐热闹，而是认真解释那些真正重要的问题。</p>
                 </div>
-                
-                <div class="card-grid">
-                    <!-- 卡片1 -->
-                    <article class="card">
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="人工智能与医学" class="card-image">
-                        <div class="card-content">
-                            <h3 class="card-title">当AI开始阅读医学影像</h3>
-                            <p class="card-excerpt">深度学习如何改变医学诊断，以及医生与算法的未来协作模式。</p>
-                            <div class="card-meta">
-                                <span class="card-category">AI+医学</span>
-                                <span class="card-date">2026年3月</span>
-                            </div>
+                <div class="feature-layout">
+                    <article class="lead-card">
+                        <div class="lead-visual" role="img" aria-label="科技与社会的抽象视觉"></div>
+                        <div class="lead-content">
+                            <span class="tag">AI Governance</span>
+                            <h3>AI时代，科技如何重塑社会信任？</h3>
+                            <p>从模型能力、平台责任到公共治理，人工智能正在重新定义社会系统中的信任基础。科技传播需要解释事实，也需要提出真正的问题。</p>
                         </div>
                     </article>
-                    
-                    <!-- 卡片2 -->
-                    <article class="card">
-                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="基因编辑" class="card-image">
-                        <div class="card-content">
-                            <h3 class="card-title">CRISPR之后：基因编辑的伦理边界</h3>
-                            <p class="card-excerpt">从治疗疾病到增强人类，我们如何在技术进步与伦理约束之间找到平衡。</p>
-                            <div class="card-meta">
-                                <span class="card-category">生命科学</span>
-                                <span class="card-date">2026年2月</span>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- 卡片3 -->
-                    <article class="card">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="气候变化" class="card-image">
-                        <div class="card-content">
-                            <h3 class="card-title">气候工程：是解决方案还是新问题？</h3>
-                            <p class="card-excerpt">地球工程学的前沿探索，以及大规模干预气候系统的风险与机遇。</p>
-                            <div class="card-meta">
-                                <span class="card-category">科技社会</span>
-                                <span class="card-date">2026年1月</span>
-                            </div>
-                        </div>
-                    </article>
+                    <div class="article-stack">
+                        <article class="article-list-card">
+                            <span class="tag">Life Science</span>
+                            <h3>中国创新药出海，进入价值重估时刻</h3>
+                            <p>中国生命科学企业正在从成本优势走向创新输出，全球药企的合作逻辑也在发生变化。</p>
+                            <div class="meta"><span>Deep Analysis</span><span>7 min read</span></div>
+                        </article>
+                        <article class="article-list-card">
+                            <span class="tag">Technology & Society</span>
+                            <h3>技术进步之后，谁来定义公共利益？</h3>
+                            <p>每一次技术跃迁都会重新分配效率、权力与风险。理解科技，也要理解科技进入社会后的复杂后果。</p>
+                            <div class="meta"><span>Essay</span><span>6 min read</span></div>
+                        </article>
+                        <article class="article-list-card">
+                            <span class="tag">Global Communication</span>
+                            <h3>如何向世界讲清中国科技创新？</h3>
+                            <p>国际科技传播不只是翻译成果，更是将技术进步放入全球语境、公共议题与人类共同挑战中理解。</p>
+                            <div class="meta"><span>Briefing</span><span>5 min read</span></div>
+                        </article>
+                    </div>
                 </div>
-                
-                <div class="section-footer">
-                    <a href="essays.html" class="btn btn-outline">浏览所有文章</a>
-                </div>
-            </section>
-            
-            <!-- 最新文章 -->
-            <section class="section">
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">最新文章</h2>
-                    <p class="section-subtitle">持续更新的科学写作</p>
+                    <h2 class="section-title">Topics</h2>
+                    <p class="section-subtitle">以专题组织知识，让复杂科技变化形成可持续阅读的结构。</p>
                 </div>
-                
-                <div class="card-grid">
-                    <!-- 卡片4 -->
-                    <article class="card">
-                        <div class="card-content">
-                            <h3 class="card-title">量子计算的实用化路径</h3>
-                            <p class="card-excerpt">从实验室到实际应用，量子计算机面临的技术挑战与商业前景分析。</p>
-                            <div class="card-meta">
-                                <span class="card-category">前沿科技</span>
-                                <span class="card-date">2026年4月</span>
-                            </div>
+                <div class="topics-grid">
+                    <article class="topic-card">
+                        <span class="topic-number">01</span>
+                        <div>
+                            <h3>AI Governance</h3>
+                            <p>人工智能治理、伦理、安全、平台责任与全球规则。</p>
                         </div>
                     </article>
-                    
-                    <!-- 卡片5 -->
-                    <article class="card">
-                        <div class="card-content">
-                            <h3 class="card-title">脑机接口：重新定义人类能力</h3>
-                            <p class="card-excerpt">Neuralink及其他脑机接口技术的进展，以及对未来社会的深远影响。</p>
-                            <div class="card-meta">
-                                <span class="card-category">神经科学</span>
-                                <span class="card-date">2026年3月</span>
-                            </div>
+                    <article class="topic-card">
+                        <span class="topic-number">02</span>
+                        <div>
+                            <h3>Life Science</h3>
+                            <p>生命科学、创新药、医学技术与健康产业趋势。</p>
                         </div>
                     </article>
-                    
-                    <!-- 卡片6 -->
-                    <article class="card">
-                        <div class="card-content">
-                            <h3 class="card-title">合成生物学：设计生命的工具箱</h3>
-                            <p class="card-excerpt">如何像编程一样设计生物系统，以及这项技术可能带来的产业革命。</p>
-                            <div class="card-meta">
-                                <span class="card-category">生物技术</span>
-                                <span class="card-date">2026年3月</span>
-                            </div>
+                    <article class="topic-card">
+                        <span class="topic-number">03</span>
+                        <div>
+                            <h3>Technology & Society</h3>
+                            <p>技术如何影响社会结构、公共利益与个体生活。</p>
+                        </div>
+                    </article>
+                    <article class="topic-card">
+                        <span class="topic-number">04</span>
+                        <div>
+                            <h3>Business of Innovation</h3>
+                            <p>科技产业、资本逻辑、企业战略与创新商业化。</p>
+                        </div>
+                    </article>
+                    <article class="topic-card">
+                        <span class="topic-number">05</span>
+                        <div>
+                            <h3>Global Communication</h3>
+                            <p>国际科技传播、国家形象与全球科技叙事。</p>
                         </div>
                     </article>
                 </div>
-            </section>
-            
-        </div>
+            </div>
+        </section>
+
+        <section id="briefing" class="section">
+            <div class="container">
+                <div class="briefing-box">
+                    <div>
+                        <div class="kicker">Science Partner Briefing</div>
+                        <h2>为决策者准备的科技简报。</h2>
+                        <p>面向科技产业人士、政策研究者、投资人与企业管理者，提供更清晰、更克制、更有判断力的科技趋势观察。</p>
+                        <a href="contact.html" class="btn btn-primary">订阅与合作</a>
+                    </div>
+                    <div class="briefing-points">
+                        <div class="briefing-point"><strong>Global Biomedicine Briefing</strong><span>全球生物医药进展、BD交易与产业趋势。</span></div>
+                        <div class="briefing-point"><strong>AI Governance Watch</strong><span>AI治理、伦理、监管与企业实践观察。</span></div>
+                        <div class="briefing-point"><strong>Technology Narrative</strong><span>国际科技传播与中国科技故事表达。</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Reports</h2>
+                    <p class="section-subtitle">从文章到报告，从传播到咨询，沉淀可复用的知识资产。</p>
+                </div>
+                <div class="report-grid">
+                    <article class="report-card">
+                        <span class="tag">Research</span>
+                        <h3>AI伦理与治理观察</h3>
+                        <p>跟踪政策、企业实践与国际治理动向，形成面向机构与企业的议题库。</p>
+                        <div class="report-foot">Quarterly Report</div>
+                    </article>
+                    <article class="report-card">
+                        <span class="tag">Industry</span>
+                        <h3>生命科学创新趋势</h3>
+                        <p>关注创新药、医疗技术、产业合作与全球竞争格局中的关键变量。</p>
+                        <div class="report-foot">Industry Insight</div>
+                    </article>
+                    <article class="report-card">
+                        <span class="tag">Communication</span>
+                        <h3>全球科技传播案例库</h3>
+                        <p>整理科技机构、企业与媒体的传播实践，服务国际表达与公共沟通。</p>
+                        <div class="report-foot">Case Library</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="about-strip">
+                    <div class="about-mark">Science<br>Partner</div>
+                    <p>
+                        科学伙伴是一个关注科技、社会与商业交汇处的知识平台，致力于把复杂科技变化转化为清晰、负责任、可行动的洞察。我们相信，高质量科技传播不是降低复杂性，而是帮助读者更准确地理解复杂性。
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
                     <a href="/" class="navbar-brand">
                         <span class="brand-name">科学伙伴</span>
-                        <span class="brand-subtitle">SciencePartner</span>
+                        <span class="brand-subtitle">Science Partner</span>
                     </a>
-                    <p class="footer-description">
-                        高端科学内容品牌，专注于深度科学写作与传播。
-                    </p>
+                    <p class="footer-description">科技、社会与商业交汇处的高端知识平台。</p>
                 </div>
-                
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4 class="footer-title">内容</h4>
+                        <h4 class="footer-title">Content</h4>
                         <ul class="footer-nav">
-                            <li><a href="essays.html">文章</a></li>
-                            <li><a href="columns/">栏目</a></li>
-                            <li><a href="features/">专题</a></li>
+                            <li><a href="essays.html">Essays</a></li>
+                            <li><a href="columns/">Topics</a></li>
+                            <li><a href="features/">Features</a></li>
                         </ul>
                     </div>
-                    
                     <div class="footer-column">
-                        <h4 class="footer-title">关于</h4>
+                        <h4 class="footer-title">Platform</h4>
                         <ul class="footer-nav">
-                            <li><a href="about.html">品牌故事</a></li>
-                            <li><a href="contact.html">联系我们</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p class="footer-copyright">
-                    &copy; 2026 科学伙伴 SciencePartner. 保留所有权利。
-                </p>
-                <p class="footer-legal">
-                    <a href="#">隐私政策</a> · <a href="#">使用条款</a>
-                </p>
+                <p class="footer-copyright">&copy; 2026 科学伙伴 Science Partner. 保留所有权利。</p>
+                <p class="footer-legal"><a href="#">Privacy</a> · <a href="#">Terms</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- 设备检测初始化脚本 -->
     <script>
-        // 确保设备检测在DOM加载后运行
         document.addEventListener('DOMContentLoaded', function() {
-            // 如果设备检测脚本未加载，提供基本功能
             if (!window.deviceDetection) {
-                console.warn('设备检测脚本未加载，使用基础检测');
-                
-                // 基础设备检测
                 const isMobile = window.innerWidth < 768;
                 const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
                 const isDesktop = window.innerWidth >= 1024;
                 const isPortrait = window.innerHeight > window.innerWidth;
-                
-                // 设置基础类名
                 const html = document.documentElement;
                 if (isMobile) html.classList.add('device-mobile');
                 if (isTablet) html.classList.add('device-tablet');
                 if (isDesktop) html.classList.add('device-desktop');
                 if (isPortrait) html.classList.add('orientation-portrait');
                 else html.classList.add('orientation-landscape');
-                
-                // 设置布局类
-                if (isMobile && isPortrait) {
-                    html.classList.add('layout-mobile-portrait');
-                } else if (isMobile && !isPortrait) {
-                    html.classList.add('layout-mobile-landscape');
-                } else if (isDesktop) {
-                    html.classList.add('layout-desktop');
-                }
-            }
-            
-            // 初始化移动端导航（如果脚本已加载）
-            if (window.mobileNavigation) {
-                console.log('移动端导航已初始化');
             }
         });
-        
-        // 处理方向变化
         window.addEventListener('orientationchange', function() {
             setTimeout(function() {
-                // 重新设置方向类
                 const html = document.documentElement;
                 const isPortrait = window.innerHeight > window.innerWidth;
-                
                 html.classList.remove('orientation-portrait', 'orientation-landscape');
-                if (isPortrait) {
-                    html.classList.add('orientation-portrait');
-                } else {
-                    html.classList.add('orientation-landscape');
-                }
+                html.classList.add(isPortrait ? 'orientation-portrait' : 'orientation-landscape');
             }, 100);
         });
     </script>
